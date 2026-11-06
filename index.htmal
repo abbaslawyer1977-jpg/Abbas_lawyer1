@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مجموعة الحسن القانونية | بإدارة المحامي عباس الحسن</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body id="pageBody">
+
+    <!-- زر الوضع الداكن العائم -->
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()" title="تغيير المظهر">
+        <i class="fa-solid fa-moon" id="themeIcon"></i>
+    </button>
+
+    <!-- زر التواصل العائم (الستارة المنسدلة) -->
+    <div class="floating-contact">
+        <div class="contact-dropdown">
+            <button class="drop-btn"><i class="fa-solid fa-headset"></i> تواصل فوري</button>
+            <div class="dropdown-content">
+                <a href="tel:00963944093408"><i class="fa-solid fa-phone"></i> 00963944093408</a>
+                <a href="https://wa.me/963944093408" target="_blank"><i class="fa-brands fa-whatsapp"></i> واتساب مباشر</a>
+                <a href="mailto:Abbas.lawyer1977@gmail.com"><i class="fa-solid fa-envelope"></i> إرسال بريد</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- الهيدر الرئيسي -->
+    <header class="header">
+        <div class="container header-flex">
+            <div>
+                <h1 class="logo">مجموعة الحسن القانونية</h1>
+                <span class="sub-logo">بإدارة المحامي عباس الحسن (25 عاماً من الخبرة)</span>
+            </div>
+            <nav class="nav">
+                <a href="#about">من نحن</a>
+                <a href="#services">خدماتنا</a>
+                <a href="#laws">القوانين</a>
+                <a href="#companies">تأسيس الشركات</a>
+                <a href="#rulings">اجتهادات النقض</a>
+                <a href="#calculator">حاسبة الرسوم</a>
+                <a href="#courts">دليل العدليات</a>
+                <a href="#templates">نماذج العقود</a>
+                <a href="#consultation">طلب استشارة</a>
+                <a href="#contact">اتصل بنا</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- قسم الهيرو -->
+    <section class="hero">
+        <div class="container">
+            <h2>ربع قرن من العدالة والحماية القانونية المحكمة</h2>
+            <p>بإدارة المحامي <strong>عباس الحسن</strong> - خبرة متراكمة تمتد لـ <strong>25 عاماً من العمل المهني المستمر أمام كافة المحاكم السورية</strong>. مسيرة حافلة بصون الحقوق وتخريج أجيال من الكوادر المدربة.</p>
+            <div class="hero-btns">
+                <a href="#companies" class="btn">دليل تأسيس الشركات</a>
+                <a href="#consultation" class="btn-outline">حجز استشارة قانونية</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم من نحن والمحامي المؤسس -->
+    <section id="about" class="section">
+        <div class="container">
+            <h3>عن مجموعة الحسن القانونية والمؤسس</h3>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>تأسست مجموعة الحسن القانونية لتكون صرحاً قانونياً يجمع بين أصالة الخبرة وعمق التحليل الحديث. بفخر واعتزاز، نضع بين أيديكم حصيلة <strong>25 عاماً من الممارسة القضائية والوقوف أمام كافة المحاكم السورية بمختلف درجاتها</strong>.</p>
+                    <p>مقرنا الرئيسي في <strong>ريف دمشق - السيدة زينب - دوار حجيرة</strong>، نقدم خدماتنا الاستشارية والترافعية وتأسيس الكيانات التجارية لكل أبناء الوطن والشركات، مع الالتزام التام بأعلى معايير النزاهة والاحتراف.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم باب الأنظمة والقوانين -->
+    <section id="laws" class="section bg-light">
+        <div class="container">
+            <h3>باب الأنظمة والقوانين السورية (حتى 2026)</h3>
+            <p>أرشيف تشريعي شامل ومحدث بدقة لخدمة السادة القضاة والمحامين والباحثين.</p>
+            <div class="search-box">
+                <input type="text" id="lawSearchInput" placeholder="ابحث عن قانون، مادة، أو تشريع..." onkeyup="searchLaws()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="laws-grid" id="lawsContainer">
+                <div class="law-card" data-keywords="القانون المدني السوري وتعديلاته">
+                    <h4><i class="fa-solid fa-scale-balanced"></i> القانون المدني السوري وتعديلاته</h4>
+                    <p>تنظيم المعاملات المالية، الحقوق العينية، العقود، والالتزامات مع أحدث التعديلات.</p>
+                </div>
+                <div class="law-card" data-keywords="قانون العقوبات الجزاء الجريمة">
+                    <h4><i class="fa-solid fa-gavel"></i> قانون العقوبات السوري</h4>
+                    <p>الجرائم والعقوبات وتعديلاتها المحدثة حتى مراسيم العفو لعام 2026.</p>
+                </div>
+                <div class="law-card" data-keywords="قانون أصول المحاكمات المدنية والجزائية">
+                    <h4><i class="fa-solid fa-file-invoice"></i> أصول المحاكمات (المدنية والجزائية)</h4>
+                    <p>القواعد الإجرائية المتبعة لتسيير الدعاوى وطرق الطعن المختلفة.</p>
+                </div>
+                <div class="law-card" data-keywords="قانون البينات الإثبات الشهادة">
+                    <h4><i class="fa-solid fa-book-open"></i> قانون البينات</h4>
+                    <p>أدلة الإثبات القانونية، الشهادة، اليمين، والقرائن المعتمدة قضائياً.</p>
+                </div>
+                <div class="law-card" data-keywords="قانون الإيجار السوري الجديد والقديم العقارات">
+                    <h4><i class="fa-solid fa-house-chimney"></i> قانون الإيجار (الجديد والقديم)</h4>
+                    <p>تنظيم العلاقة الإيجارية وأحكام التخلي والخلو.</p>
+                </div>
+                <div class="law-card" data-keywords="قانون الشركات وتجارة التجارة والأعمال">
+                    <h4><i class="fa-solid fa-building-columns"></i> قانون الشركات والتجارة</h4>
+                    <p>تأسيس الشركات، الأوراق التجارية، والإفلاس.</p>
+                </div>
+                <div class="law-card" data-keywords="قانون تملك العرب والاجانب الاستثمار العقاري">
+                    <h4><i class="fa-solid fa-earth-americas"></i> تملك العرب والأجانب والاستثمار</h4>
+                    <p>الضوابط القانونية لتملك غير السوريين والتشريعات الاستثمارية.</p>
+                </div>
+                <div class="law-card" data-keywords="قانون التسجيل العقاري السجل العقاري">
+                    <h4><i class="fa-solid fa-map-location-dot"></i> قانون التسجيل العقاري</h4>
+                    <p>أحكام الشهر العقاري، الصحيفة العقارية وتثبيت الملكيات.</p>
+                </div>
+                <div class="law-card" data-keywords="قانون الجرائم الإلكترونية المعلوماتية الإنترنت">
+                    <h4><i class="fa-solid fa-laptop-code"></i> قانون الجرائم الإلكترونية</h4>
+                    <p>مكافحة جرائم تقانة المعلومات والاحتيال الإلكتروني.</p>
+                </div>
+                <div class="law-card" data-keywords="قانون السير المرور الحوادث">
+                    <h4><i class="fa-solid fa-car-burst"></i> قانون السير والمرور</h4>
+                    <p>المخالفات، حوادث السير، والمسؤولية الناشئة عن المركبات.</p>
+                </div>
+                <div class="law-card" data-keywords="قانون الأحوال الشخصية الزواج الطلاق الميراث">
+                    <h4><i class="fa-solid fa-people-roof"></i> قانون الأحوال الشخصية</h4>
+                    <p>أحكام الزواج، الطلاق، الحضانة، والتركات والمواريث.</p>
+                </div>
+                <div class="law-card" data-keywords="قانون مجلس الدولة القضاء الإداري">
+                    <h4><i class="fa-solid fa-landmark"></i> قانون مجلس الدولة</h4>
+                    <p>تنظيم القضاء الإداري وطعون القرارات الإدارية.</p>
+                </div>
+                <div class="law-card" data-keywords="مراسيم العفو التشريعي حتى 2026 العقوبات">
+                    <h4><i class="fa-solid fa-shield-heart"></i> مراسيم العفو التشريعي (حتى 2026)</h4>
+                    <p>قراءة تحليلية لأحدث مراسيم العفو الرئاسية وتأثيرها القضائي.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم خطوات تأسيس الشركات وأهم النصائح -->
+    <section id="companies" class="section">
+        <div class="container">
+            <h3>دليل تأسيس الشركات في سورية وأهم النصائح القانونية</h3>
+            <p>منهجية علمية وعملية لتأسيس الشركات وفقاً لقانون الشركات السوري النافذ، بإشراف قانوني متخصص.</p>
+            <div class="companies-grid">
+                <div class="comp-card">
+                    <h4><i class="fa-solid fa-1"></i> اختيار الشكل القانوني للشركة</h4>
+                    <p>تحديد نوع الشركة المناسب للنشاط (شركة تضامن، توصية، مسؤولية محدودة LLC، أو مسهمة مغفلة) بناءً على حجم راس المال وعدد الشركاء.</p>
+                </div>
+                <div class="comp-card">
+                    <h4><i class="fa-solid fa-2"></i> صياغة عقد التأسيس والنظام الأساسي</h4>
+                    <p>إعداد العقود بدقة متناهية لتحديد حصص الشركاء، طريقة الإدارة، صلاحيات المفوض بالتوقيع، وآلية توزيع الأرباح لتفادي النزاعات.</p>
+                </div>
+                <div class="comp-card">
+                    <h4><i class="fa-solid fa-3"></i> الموافقات الرسمية والشهر السجلي</h4>
+                    <p>استخراج الموافقات الأمنية والجهات المختصة، توثيق العقد لدى الكاتب العدل، وتسجيل الشركة في السجل التجاري.</p>
+                </div>
+                <div class="comp-card">
+                    <h4><i class="fa-solid fa-4"></i> التسجيل الضريبي والمالي</h4>
+                    <p>الحصول على الرقم المالي والبطاقة الضريبية وتسجيل الشركة أصولاً لدى دوائر المالية والجهات التأمينية.</p>
+                </div>
+            </div>
+            <div class="tips-box">
+                <h4><i class="fa-solid fa-lightbulb"></i> أهم النصائح القانونية للمستثمر ورائد الأعمال</h4>
+                <ul>
+                  <li><strong>لا تكتفِ بالعقود الجاهزة:</strong> تفصيل عقد التأسيس خصيصاً لشركتك يحميك من ثغرات قاتلة.</li>
+                  <li><strong>تحديد صلاحيات المدير بدقة:</strong> وضوح حدود صلاحيات المفوض بالتوقيع يمنع استغلال الصلاحيات.</li>
+                  <li><strong>الامتثال الضريبي المبكر:</strong> المتابعة الدورية مع المحاسب القانوني يعفي الشركة من الغرامات.</li>
+                  <li><strong>فض النزاعات مسبقاً:</strong> إدراج بند التحكيم التجاري يضمن حل أي نزاع بين الشركاء بسرية تامة.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- نافذة اجتهادات محكمة النقض السورية -->
+    <section id="rulings" class="section bg-light">
+        <div class="container">
+            <h3>اجتهادات محكمة النقض السورية (1960 - 2026)</h3>
+            <p>مبادئ قانونية أصيلة مصنفة مع ميزة النسخ المباشر للاستخدام في المذكرات القانونية.</p>
+            <div class="search-box">
+                <input type="text" id="rulingSearchInput" placeholder="ابحث في الاجتهادات..." onkeyup="searchRulings()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="ruling-tabs">
+                <button class="tab-btn active" onclick="filterRulings('all')">الكل</button>
+                <button class="tab-btn" onclick="filterRulings('criminal')">الجزائي / الجنائي</button>
+                <button class="tab-btn" onclick="filterRulings('civil')">المدني</button>
+                <button class="tab-btn" onclick="filterRulings('personal')">الشرعي</button>
+            </div>
+            <div class="rulings-list" id="rulingsContainer">
+                <div class="ruling-card" data-category="civil">
+                    <span class="badge civil-badge">مدني</span>
+                    <h4>مبدأ في تفسير العقود والنية المشتركة</h4>
+                    <p id="ruling1">«العبرة في العقود للمقاصد والمعاني لا للألفاظ والمباني، ومتى كانت عبارة العقد واضحة فلا يجوز الانحراف عنها عن طريق تفسيرها للتعرف على إرادة المتعاقدين.»</p>
+                    <div class="ruling-source">المصدر: نقض مدني أساس (120) لعام 1985 - مجلة المحامون.</div>
+                    <button class="copy-btn" onclick="copyRuling('ruling1')"><i class="fa-solid fa-copy"></i> نسخ المبدأ القانوني</button>
+                </div>
+                <div class="ruling-card" data-category="criminal">
+                    <span class="badge criminal-badge">جزائي</span>
+                    <h4>مبدأ في أركان الشروع بالقتل</h4>
+                    <p id="ruling2">«الشروع الجنائي يستلزم بدء التنفيذ بأفعال مباشرة تؤدي حالاً إلى نتيجة الجريمة، مع توفر قصد إزهاق الروح.»</p>
+                    <div class="ruling-source">المصدر: نقض جزائي - قرار (450) لعام 2004.</div>
+                    <button class="copy-btn" onclick="copyRuling('ruling2')"><i class="fa-solid fa-copy"></i> نسخ المبدأ القانوني</button>
+                </div>
+                <div class="ruling-card" data-category="personal">
+                    <span class="badge personal-badge">شرعي</span>
+                    <h4>مبدأ في استحقاق النفقة والنشوز</h4>
+                    <p id="ruling3">«الزوجة مستحقة للنفقة بموجب العقد الصحيح متى سلمت نفسها لزوجها، ولا تسقط إلا بثبوت نشوزها بحكم مبرم.»</p>
+                    <div class="ruling-source">المصدر: أحكام النقض - الغرفة الشرعية - أساس (78) لسنة 2012.</div>
+                    <button class="copy-btn" onclick="copyRuling('ruling3')"><i class="fa-solid fa-copy"></i> نسخ المبدأ القانوني</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- حاسبة الرسوم القضائية التقديرية -->
+    <section id="calculator" class="section">
+        <div class="container">
+            <h3>حاسبة الرسوم القضائية التقديرية</h3>
+            <p>أداة مساعدة لتقدير الرسوم الأولية بناءً على قيمة المطالبة المالية.</p>
+            <div class="calc-box">
+                <label>أدخل قيمة الدعوى (بالليرة السورية):</label>
+                <input type="number" id="claimValue" placeholder="مثال: 5000000">
+                <button onclick="calculateFees()" class="btn" style="margin-top: 15px;">احسب الرسوم التقديرية</button>
+                <div id="calcResult" class="calc-result"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- دليل الدوائر القضائية والعدليات -->
+    <section id="courts" class="section bg-light">
+        <div class="container">
+            <h3>دليل العدليات والدوائر القضائية</h3>
+            <p>مقر المكتب الرئيسي وعناوين المحاكم لتسهيل مراجعة الموكلين.</p>
+            <div class="courts-grid">
+                <div class="court-box">
+                    <h4>مقر مجموعة الحسن القانونية</h4>
+                    <p>📍 ريف دمشق - السيدة زينب - دوار حجيرة (المقر الرئيسي للاستقبال والمراجعات).</p>
+                </div>
+                <div class="court-box">
+                    <h4>قصر العدل بدمشق</h4>
+                    <p>📍 المزة - ساحة المحافظة (الدوائر المدنية، الجزائية، والنيابة العامة).</p>
+                </div>
+                <div class="court-box">
+                    <h4>محكمة النقض السورية</h4>
+                    <p>📍 دمشق - الهيئة القضائية العليا للطعون ومراقبة تطبيق القانون.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- نماذج العقود والإنذارات القانونية -->
+    <section id="templates" class="section">
+        <div class="container">
+            <h3>أرشيف النماذج والعقود القانونية</h3>
+            <p>صيغ نموذجية قابلة للنسخ والاستخدام الأولي للاستئناس المهني.</p>
+            <div class="templates-grid">
+                <div class="template-box">
+                    <h4>نموذج عقد إيجار عقار سكني</h4>
+                    <textarea readonly class="template-text">إنه في يوم ...... التاريخ: .../.../2026م، الفريق الأول (المالك): ............ الفريق الثاني (المستأجر): ............ تم الاتفاق على إيجار العقار الكائن في ريف دمشق لقاء بدل إيجار شهري وقدره ............ ولغاية سكنية حصراً.</textarea>
+                    <button class="copy-btn" onclick="copyText(this)"><i class="fa-solid fa-copy"></i> نسخ النموذج</button>
+                </div>
+                <div class="template-box">
+                    <h4>نموذج إنذار عدلي مطالبات مالية</h4>
+                    <p>يُستخدم لتوجيه تنبيه رسمي بالوفاء بالدين قبل اللجوء للقضاء المستعجل أو العادي.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- نموذج طلب استشارة إلكترونية مباشر عبر الواتساب -->
+    <section id="consultation" class="section bg-light">
+        <div class="container">
+            <h3>اطلب استشارة قانونية فورية</h3>
+            <p>املأ البيانات أدناه، وسيتم توجيهك مباشرة لفتح محادثة واتساب جاهزة مع المحامي عباس الحسن:</p>
+            <div class="consult-form">
+                <input type="text" id="clientName" placeholder="الاسم الكريم...">
+                <input type="text" id="clientPhone" placeholder="رقم الهاتف...">
+                <select id="caseType">
+                    <option value="تأسيس شركات">تأسيس شركات واستثمار</option>
+                    <option value="استشارة مدنية">استشارة مدنية وعقارية</option>
+                    <option value="قضية جزائية">قضية جزائية / جنائية</option>
+                    <option value="أحوال شخصية">أحوال شخصية (شرعي)</option>
+                </select>
+                <textarea id="caseDetails" placeholder="اكتب ملخصاً موجزاً للقضية أو طلب تأسيس الشركة..."></textarea>
+                <button onclick="sendToWhatsApp()" class="btn"><i class="fa-brands fa-whatsapp"></i> إرسال الاستشارة عبر الواتساب</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم اتصل بنا -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h3>تواصل مع مجموعة الحسن القانونية</h3>
+            <div class="contact-info-box">
+                <p><i class="fa-solid fa-location-dot"></i> العنوان: ريف دمشق - السيدة زينب - دوار حجيرة</p>
+                <p><i class="fa-solid fa-phone"></i> الهاتف المباشر: <a href="tel:00963944093408">00963944093408</a></p>
+                <p><i class="fa-brands fa-whatsapp"></i> واتساب: <a href="https://wa.me/963944093408" target="_blank">مراسلة فورية</a></p>
+                <p><i class="fa-solid fa-envelope"></i> البريد الإلكتروني: <a href="mailto:Abbas.lawyer1977@gmail.com">Abbas.lawyer1977@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- التذييل -->
+    <footer class="footer">
+        <p>جميع الحقوق محفوظة &copy; 2026 - مجموعة الحسن القانونية | بإدارة المحامي عباس الحسن (25 عاماً من العطاء المهني)</p>
+    </footer>
+
+    <!-- السكربتات التفاعلية المتقدمة -->
+    <script>
+        function searchLaws() {
+            let input = document.getElementById('lawSearchInput').value.toLowerCase();
+            let cards = document.querySelectorAll('.law-card');
+            cards.forEach(card => {
+                let keywords = card.getAttribute('data-keywords').toLowerCase();
+                let title = card.querySelector('h4').textContent.toLowerCase();
+                let desc = card.querySelector('p').textContent.toLowerCase();
+                if (keywords.includes(input) || title.includes(input) || desc.includes(input)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+
+        function searchRulings() {
+            let input = document.getElementById('rulingSearchInput').value.toLowerCase();
+            let cards = document.querySelectorAll('.ruling-card');
+            cards.forEach(card => {
+                let text = card.textContent.toLowerCase();
+                if (text.includes(input)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+
+        function filterRulings(category) {
+            let cards = document.querySelectorAll('.ruling-card');
+            let buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+
+        function copyRuling(id) {
+            let text = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(text);
+            alert('تم نسخ المبدأ القانوني بنجاح للاستخدام في مذكراتك!');
+        }
+
+        function copyText(btn) {
+            let text = btn.previousElementSibling.value;
+            navigator.clipboard.writeText(text);
+            alert('تم نسخ نموذج العقد بنجاح!');
+        }
+
+        function calculateFees() {
+            let val = document.getElementById('claimValue').value;
+            let resultBox = document.getElementById('calcResult');
+            if(!val || val <= 0) {
+                resultBox.innerHTML = "يرجى إدخال قيمة صحيحة.";
+                return;
+            }
+            let estimatedFee = val * 0.02;
+            resultBox.innerHTML = `الرسوم القضائية والخدمات التقديرية التقريبية: <strong>${estimatedFee.toLocaleString()} ليرة سورية</strong> (تختلف حسب طبيعة الدعوى ورسوم الطوابع والخدمات النافذة).`;
+        }
+
+        function sendToWhatsApp() {
+            let name = document.getElementById('clientName').value;
+            let phone = document.getElementById('clientPhone').value;
+            let type = document.getElementById('caseType').value;
+            let details = document.getElementById('caseDetails').value;
+            
+            let message = `مرحباً مجموعة الحسن القانونية (دوار حجيرة)، أرغب بطلب استشارة:%0aالاسم: ${name}%0aالهاتف: ${phone}%0aنوع الطلب: ${type}%0aالتفاصيل: ${details}`;
+            window.open(`https://wa.me/963944093408?text=${message}`, '_blank');
+        }
+
+        function toggleDarkMode() {
+            let body = document.getElementById('pageBody');
+            let icon = document.getElementById('themeIcon');
+            body.classList.toggle('dark-mode');
+            if(body.classList.contains('dark-mode')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        }
+    </script>
+
+</body>
+</html>
